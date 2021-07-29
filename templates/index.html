@@ -30,37 +30,12 @@
                     <input type="submit" value="Submit" class="btn btn-info">
                 </p>
             </form>
-            
-            <p>
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        <ul>
-                            {% for message in messages %}
-                                <li>{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                {% endwith %}
-            </p>
+              
 
         </div>
     </div>
 
-    {% if filename %}
-    <div class="container">
-        <div class="col-md6">
-            <div class="row">
-                <img style="  width: 300px; height: 180px;" src="{{url_for('display_image',filename = filename)}}">
-            </div>
-        </div>
-        <div class="col-md-6">
-            
-        </div>
-
-    </div>
     
-        
-    {% endif %}
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
