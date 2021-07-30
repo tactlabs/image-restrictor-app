@@ -46,6 +46,18 @@
                     <input type="submit" value="Submit" class="btn btn-info">
                 </p>
             </form>
+
+            <p>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+            </p>
               
 
         </div>
